@@ -2,7 +2,7 @@ package com.rocketseat.planner.services.trip;
 
 
 import com.rocketseat.planner.domains.trip.Trip;
-import com.rocketseat.planner.repository.TripRepository;
+import com.rocketseat.planner.repository.trip.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +21,9 @@ public class TripService {
 
     public Optional<Trip> getTripById(UUID id) {
         return tripRepository.findById(id);
+    }
+
+    public void updateTrip(Trip trip) {
+        tripRepository.save(trip);
     }
 }
