@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS participants (
     email VARCHAR(255) NOT NULL,
     is_confirmed BOOLEAN NOT NULL,
     trip_id UUID NOT NULL,
-    FOREIGN KEY (trip_id) REFERENCES trips(id)
+    FOREIGN KEY (trip_id) REFERENCES trips(id) ON DELETE CASCADE
 );
 
